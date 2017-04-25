@@ -10,9 +10,27 @@
 				src:url("DDCHardware-Regular.otf");
 			}
 			
+			@keyframes blink {
+				0% {
+					opacity:0.9;
+				}
+				49% {
+					opacity:0.9;
+				}
+				50% {
+					opacity:0;
+				}
+				99% {
+					opacity:0;
+				}
+				100% {
+					opacity:0.9;
+				}
+			}
+			
 			body {
 				color:#FEFDFF;
-				background-color:#F80095;
+				background-color:#AFDBD5; /* C5E0DC, FB8821, F80095, 02435D */
 				padding:0;
 				margin:0;
 			}
@@ -41,11 +59,23 @@
 				letter-spacing:-0.5vw;
 				line-height:1em;
 			}
+			
+			.Cursor {
+				display:inline-block;
+				background-color:#FEFDFF;
+				width:0.4125em;
+				height:0.9em;
+				margin:0 0 -0.06125em 0.06125em;
+				animation-name:blink;
+				animation-duration:1200ms;
+				animation-timing-function:linear;
+				animation-iteration-count:infinite;
+			}
 		</style>
 	</head>
 	<body>
 		<header>
-			<h1>Project<br/>Code</h1>
+			<h1>Project<br/>Code<span class="Cursor"></span></h1>
 		</header>
 	</body>
 </html>
